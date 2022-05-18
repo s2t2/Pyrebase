@@ -89,7 +89,7 @@ class Auth:
 
     def create_custom_token(self, uid, additional_claims=None):
         service_account_email = self.credentials.service_account_email
-        private_key = RSA.importKey(self.credentials._private_key_pkcs8_pem)
+        private_key = RSA.importKey(self.credentials._private_key_pkcs8_pem) # not sure what the new equivalent is...
         payload = {
             "iss": service_account_email,
             "sub": service_account_email,
@@ -250,7 +250,9 @@ class Database:
     def build_headers(self, token=None):
         headers = {"content-type": "application/json; charset=UTF-8"}
         if not token and self.credentials:
-            access_token = self.credentials.get_access_token().access_token
+            breakpoint()
+            #access_token = self.credentials.get_access_token().access_token
+            access_token = self.credentials.token # this is None though
             headers['Authorization'] = 'Bearer ' + access_token
         return headers
 
