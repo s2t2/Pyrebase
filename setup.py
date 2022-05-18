@@ -21,6 +21,6 @@ setup(
         'google-auth==2.6.6',
         'requests_toolbelt==0.7.0',
         'python_jwt==2.0.1',
-        'pycryptodome==3.4.3'
+        'pycryptodome==3.14.1'
     ]
 )

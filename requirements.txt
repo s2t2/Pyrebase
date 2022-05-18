@@ -3,4 +3,4 @@ google-cloud-storage==2.3.0
 google-auth==2.6.6
 requests-toolbelt==0.7.0
 python-jwt==2.0.1
-pycrypto==2.6.1
+pycryptodome==3.14.1
